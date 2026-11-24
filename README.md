@@ -4,7 +4,7 @@
 - **Name:** Saif Ullah Jafri
 - **UID / Roll Number:** 2365717615
 - **Assigned Problem Statement:** P6 — Music Playlist
-- **GitHub Repository:** https://github.com/Saifjafri212213/saifullah-midsem-phase2
+- **GitHub Repository:** https://github.com/Saifjafri212213/WebD-Assignment-7
 - **Live Vercel Deployment Link:** https://saifullah-midsem-phase2.vercel.app
 
 ## Features & Implementation
