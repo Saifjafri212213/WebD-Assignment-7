@@ -1,12 +1,12 @@
 import { Link } from 'react-router'
 import './Navbar.css'
 
-function Navbar({ adoptedCount }) {
+function Navbar({ playlistCount }) {
   return (
     <div>
       <Link to="/">Home</Link>{' | '}
-      <Link to="/pets">Pets</Link>{' | '}
-      <Link to="/adopted">Adopted ({adoptedCount})</Link>
+      <Link to="/songs">Songs</Link>{' | '}
+      <Link to="/playlist">Playlist ({playlistCount})</Link>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-div:has(> a[href^="/pets/"]) {
+div:has(> a[href^="/songs/"]) {
   background: white;
   border: 1px solid #e1e7dd;
   border-radius: 14px;
@@ -9,12 +9,12 @@ div:has(> a[href^="/pets/"]) {
   transition: box-shadow .2s, transform .2s;
 }
 
-div:has(> a[href^="/pets/"]):hover {
+div:has(> a[href^="/songs/"]):hover {
   box-shadow: 0 10px 22px #243b2a16;
   transform: translateY(-3px);
 }
 
-div:has(> a[href^="/pets/"]) > a {
+div:has(> a[href^="/songs/"]) > a {
   align-items: center;
   background: #edf3e9;
   border-radius: 11px;
@@ -24,22 +24,22 @@ div:has(> a[href^="/pets/"]) > a {
   margin: -19px -19px 17px;
 }
 
-div:has(> a[href^="/pets/"]) > a h2 {
+div:has(> a[href^="/songs/"]) > a h2 {
   font-size: 62px;
   margin: 0;
 }
 
-div:has(> a[href^="/pets/"]) > h2 {
+div:has(> a[href^="/songs/"]) > h2 {
   font-size: 23px;
   margin: 0 0 10px;
 }
 
-div:has(> a[href^="/pets/"]) > p {
+div:has(> a[href^="/songs/"]) > p {
   color: #667168;
   font-size: 14px;
   margin: 7px 0;
 }
 
-div:has(> a[href^="/pets/"]) > button {
+div:has(> a[href^="/songs/"]) > button {
   margin-top: 12px;
 }

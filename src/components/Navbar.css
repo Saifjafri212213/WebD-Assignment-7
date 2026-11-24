@@ -1,4 +1,4 @@
-div:has(> a[href="/"]):has(> a[href="/pets"]):has(> a[href="/adopted"]) {
+div:has(> a[href="/"]):has(> a[href="/songs"]):has(> a[href="/playlist"]) {
   align-items: center;
   background: white;
   border-bottom: 1px solid #e5e9e1;
@@ -9,7 +9,7 @@ div:has(> a[href="/"]):has(> a[href="/pets"]):has(> a[href="/adopted"]) {
   padding: 0 max(calc((100% - 1120px) / 2), 24px);
 }
 
-div:has(> a[href="/"]):has(> a[href="/pets"]):has(> a[href="/adopted"]) a {
+div:has(> a[href="/"]):has(> a[href="/songs"]):has(> a[href="/playlist"]) a {
   color: #405d45;
   font-size: 15px;
 }

@@ -1,45 +1,60 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
-import petData from './Data/data'
-import Navbar from './Components/Navbar'
-import Home from './Components/Home'
-import Pets from './Components/Pets'
-import PetDetails from './Components/PetDetails'
-import Adopted from './Components/Adopted'
+import songsData from './data/songs'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Songs from './pages/Songs'
+import SongDetails from './pages/SongDetails'
+import Playlist from './pages/Playlist'
 
 function App() {
-  const [pets, setPets] = useState(petData)
-  const [search, setsearch] = useState("")
-  const [type, settype] = useState("all")
+  const [songs, setSongs] = useState(songsData)
+  const [search, setSearch] = useState('')
+  const [genre, setGenre] = useState('All')
 
-  function adoptPet(id){
-    setPets((currpets)=>currpets.map((pet)=>
-      pet.id===id ? { ...pet, isAdopted: true }: pet))
+  function togglePlaylist(id) {
+    setSongs((currSongs) =>
+      currSongs.map((song) =>
+        song.id === id ? { ...song, isInPlaylist: !song.isInPlaylist } : song
+      )
+    )
   }
 
-  function cancelAdoption(id){
-    setPets((currpets)=>currpets.map((pet)=>
-      pet.id===id ? { ...pet, isAdopted: false } :pet))
-  }
-
-  let result = pets.filter((elem)=>(
-    elem.name.toLowerCase().includes(search.toLowerCase())
-    &&
-    (type==="all" || type===elem.type)
+  const result = songs.filter((elem) => (
+    elem.title.toLowerCase().includes(search.toLowerCase()) &&
+    (genre === 'All' || genre === 'all' || elem.genre === genre)
   ))
 
-  const cnt = pets.filter((pet) => pet.isAdopted).length
+  const cnt = songs.filter((song) => song.isInPlaylist).length
 
   return (
     <BrowserRouter>
       <div>
-        <Navbar adoptedCount={cnt} />
+        <Navbar playlistCount={cnt} />
         <Routes>
-          <Route path="/" element={<Home pets={pets} />} />
-          <Route path="/pets" element={<Pets pets={result} search={search} setsearch={setsearch} type={type} settype={settype} adoptPet={adoptPet} cancelAdoption={cancelAdoption} />} />
-          <Route path="/pets/:id" element={<PetDetails pets={pets} adoptPet={adoptPet} cancelAdoption={cancelAdoption} />} />
-          <Route path="/adopted" element={<Adopted pets={pets} cancelAdoption={cancelAdoption} />} />
+          <Route path="/" element={<Home songs={songs} />} />
+          <Route
+            path="/songs"
+            element={
+              <Songs
+                songs={result}
+                search={search}
+                setSearch={setSearch}
+                genre={genre}
+                setGenre={setGenre}
+                togglePlaylist={togglePlaylist}
+              />
+            }
+          />
+          <Route
+            path="/songs/:id"
+            element={<SongDetails songs={songs} togglePlaylist={togglePlaylist} />}
+          />
+          <Route
+            path="/playlist"
+            element={<Playlist songs={songs} togglePlaylist={togglePlaylist} />}
+          />
         </Routes>
       </div>
     </BrowserRouter>
