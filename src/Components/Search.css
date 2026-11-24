@@ -1,0 +1,19 @@
+div:has(> input) {
+  margin-bottom: 14px;
+}
+
+input {
+  background: white;
+  border: 1px solid #d6ded3;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font: inherit;
+  max-width: 360px;
+  padding: 11px 13px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #6f9676;
+  outline: 3px solid #6f967622;
+}

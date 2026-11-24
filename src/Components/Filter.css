@@ -1,0 +1,20 @@
+div:has(> label + select) {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+label {
+  color: #59665b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+select {
+  background: white;
+  border: 1px solid #d6ded3;
+  border-radius: 8px;
+  color: #344b39;
+  font: inherit;
+  padding: 9px 12px;
+}

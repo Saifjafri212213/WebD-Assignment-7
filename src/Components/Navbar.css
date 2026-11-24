@@ -1,0 +1,15 @@
+div:has(> a[href="/"]):has(> a[href="/pets"]):has(> a[href="/adopted"]) {
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e5e9e1;
+  box-shadow: 0 2px 8px #243b2a0a;
+  display: flex;
+  gap: 22px;
+  min-height: 68px;
+  padding: 0 max(calc((100% - 1120px) / 2), 24px);
+}
+
+div:has(> a[href="/"]):has(> a[href="/pets"]):has(> a[href="/adopted"]) a {
+  color: #405d45;
+  font-size: 15px;
+}

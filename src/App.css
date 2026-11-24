@@ -1,0 +1,26 @@
+a {
+  color: #416d4c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #254a31;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #4f7a58;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 11px 17px;
+  transition: background .2s, transform .2s;
+}
+
+button:hover {
+  background: #3c6345;
+  transform: translateY(-1px);
+}

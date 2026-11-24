@@ -1,0 +1,45 @@
+div:has(> a[href^="/pets/"]) {
+  background: white;
+  border: 1px solid #e1e7dd;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px #243b2a0b;
+  min-width: 0;
+  overflow: hidden;
+  padding: 19px;
+  transition: box-shadow .2s, transform .2s;
+}
+
+div:has(> a[href^="/pets/"]):hover {
+  box-shadow: 0 10px 22px #243b2a16;
+  transform: translateY(-3px);
+}
+
+div:has(> a[href^="/pets/"]) > a {
+  align-items: center;
+  background: #edf3e9;
+  border-radius: 11px;
+  display: flex;
+  height: 118px;
+  justify-content: center;
+  margin: -19px -19px 17px;
+}
+
+div:has(> a[href^="/pets/"]) > a h2 {
+  font-size: 62px;
+  margin: 0;
+}
+
+div:has(> a[href^="/pets/"]) > h2 {
+  font-size: 23px;
+  margin: 0 0 10px;
+}
+
+div:has(> a[href^="/pets/"]) > p {
+  color: #667168;
+  font-size: 14px;
+  margin: 7px 0;
+}
+
+div:has(> a[href^="/pets/"]) > button {
+  margin-top: 12px;
+}
